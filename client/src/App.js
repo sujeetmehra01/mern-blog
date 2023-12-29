@@ -1,24 +1,90 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <main>
+      <header>
+        <a href="/" className="logo" alt="logo">
+          MyBlog
         </a>
+        <nav>
+          <a href="/">Login</a>
+          <a href="/">Register</a>
+        </nav>
       </header>
-    </div>
+      <div className="post">
+        <div className="image">
+          <img
+            src="https://static.toiimg.com/thumb/msid-106362161,imgsize-25980,width-400,resizemode-4/106362161.jpg"
+            alt=""
+          />
+        </div>
+        <div className="texts">
+          <h2>
+            At 1.5L units, MMR records highest flat sales among top 7 cities in
+            2023
+          </h2>
+          <p className="info">
+            <a href="/" className="author">
+              SUJEET MEHRA
+            </a>
+            <time>2023-12-29</time>
+          </p>
+          <p className="summary">
+            MUMBAI: The Mumbai Metropolitan Region (MMR) recorded the highest
+            sale of apartments among the top seven cities in 2023.
+          </p>
+        </div>
+      </div>
+
+      <div className="post">
+        <div className="image">
+          <img
+            src="https://static.toiimg.com/thumb/msid-106362161,imgsize-25980,width-400,resizemode-4/106362161.jpg"
+            alt=""
+          />
+        </div>
+        <div className="texts">
+          <h2>
+            At 1.5L units, MMR records highest flat sales among top 7 cities in
+            2023
+          </h2>
+          <p className="info">
+            <a href="/" className="author">
+              SUJEET MEHRA
+            </a>
+            <time>2023-12-29</time>
+          </p>
+          <p className="summary">
+            MUMBAI: The Mumbai Metropolitan Region (MMR) recorded the highest
+            sale of apartments among the top seven cities in 2023.
+          </p>
+        </div>
+      </div>
+      <div className="post">
+        <div className="image">
+          <img
+            src="https://static.toiimg.com/thumb/msid-106362161,imgsize-25980,width-400,resizemode-4/106362161.jpg"
+            alt=""
+          />
+        </div>
+        <div className="texts">
+          <h2>
+            At 1.5L units, MMR records highest flat sales among top 7 cities in
+            2023
+          </h2>
+          <p className="info">
+            <a href="/" className="author">
+              SUJEET MEHRA
+            </a>
+            <time>2023-12-29</time>
+          </p>
+          <p className="summary">
+            MUMBAI: The Mumbai Metropolitan Region (MMR) recorded the highest
+            sale of apartments among the top seven cities in 2023.
+          </p>
+        </div>
+      </div>
+    </main>
   );
 }
 
