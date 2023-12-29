@@ -25,12 +25,14 @@ const RegisterPage = () => {
       <form className="register" onSubmit={register}>
         <h1>Register</h1>
         <input
+          required
           type="text"
           placeholder="Username"
           value={username}
           onChange={(ev) => SetUsername(ev.target.value)}
         />
         <input
+          required
           type="password"
           placeholder="Password"
           value={password}

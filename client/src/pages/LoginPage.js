@@ -32,12 +32,14 @@ export default function LoginPage() {
     <form className="login" onSubmit={login}>
       <h1>Login</h1>
       <input
+        required
         type="text"
         placeholder="username"
         value={username}
         onChange={(ev) => setUsername(ev.target.value)}
       />
       <input
+        required
         type="password"
         placeholder="password"
         value={password}
