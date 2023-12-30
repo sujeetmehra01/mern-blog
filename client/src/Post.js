@@ -1,34 +1,34 @@
-import React from "react";
+import { formatISO9075 } from "date-fns";
+import { Link } from "react-router-dom";
 
-const Post = () => {
+export default function Post({
+  _id,
+  title,
+  summary,
+  cover,
+  content,
+  createdAt,
+  author,
+}) {
   return (
-    <div>
-      <div className="post">
-        <div className="image">
-          <img
-            src="https://static.toiimg.com/thumb/msid-106362161,imgsize-25980,width-400,resizemode-4/106362161.jpg"
-            alt=""
-          />
-        </div>
-        <div className="texts">
-          <h2>
-            At 1.5L units, MMR records highest flat sales among top 7 cities in
-            2023
-          </h2>
-          <p className="info">
-            <a href="/" className="author">
-              SUJEET MEHRA
-            </a>
-            <time>2023-12-29</time>
-          </p>
-          <p className="summary">
-            MUMBAI: The Mumbai Metropolitan Region (MMR) recorded the highest
-            sale of apartments among the top seven cities in 2023.
-          </p>
-        </div>
+    <div className="post">
+      <div className="image">
+        <Link to={`/post/${_id}`}>
+          <img src={"http://localhost:4000/" + cover} alt="" />
+        </Link>
+      </div>
+      <div className="texts">
+        <Link to={`/post/${_id}`}>
+          <h2>{title}</h2>
+        </Link>
+        <p className="info">
+          <a href="/" className="author">
+            {author.username}
+          </a>
+          <time>{formatISO9075(new Date(createdAt))}</time>
+        </p>
+        <p className="summary">{summary}</p>
       </div>
     </div>
   );
-};
-
-export default Post;
+}

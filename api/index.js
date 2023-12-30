@@ -123,6 +123,15 @@ app.put("/post", uploadMiddleware.single("file"), async (req, res) => {
   });
 });
 
+//create route get all post from database
+app.get("/post", async (req, res) => {
+  res.json(
+    await Post.find()
+      .populate("author", ["username"])
+      .sort({ createdAt: -1 })
+      .limit(20)
+  );
+});
 // create get post router
 app.get("/post/:id", async (req, res) => {
   const { id } = req.params;
