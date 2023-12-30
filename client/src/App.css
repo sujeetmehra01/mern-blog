@@ -45,6 +45,9 @@ div.post {
   div.post {
     grid-template-columns: 0.9fr 1.1fr;
   }
+  img {
+    max-width: 60%;
+  }
 }
 
 div.post div.texts h2 {
